@@ -28,8 +28,11 @@ export class ShoppingListService {
 //    }
     this.ingredients.push(...ingredients); //... aka spread operator allows the push method to pass the ingredients as individual objects not as the whole array object like [] would (array into a list)
     this.ingredientChanged.next(this.ingredients.slice());
-
   }
 
+  updateIngredient(index: number, newIngredient: Ingredient) {
+    this.ingredients[index] = newIngredient;
+    this.ingredientChanged.next(this.ingredients.slice());
+  }
 }
 
