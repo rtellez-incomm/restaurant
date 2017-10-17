@@ -1,3 +1,4 @@
+import { AuthGuard } from './auth/auth-guard.service';
 import { AuthService } from './auth/auth.service';
 import { DataStorageService } from './shared/data-storage-service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -45,7 +46,7 @@ import { SigninComponent } from './auth/signin/signin.component';
     AppRoutingModule, 
     HttpModule
   ],
-  providers: [ShoppingListService, RecipeService, DataStorageService, AuthService],
+  providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
