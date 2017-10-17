@@ -31,9 +31,10 @@ import { SigninComponent } from './auth/signin/signin.component';
   imports: [
     BrowserModule, //all features of common module + additional ones for when the application starts
     FormsModule,
+    RecipesModule,
     AppRoutingModule, 
     HttpModule, 
-    RecipesModule
+    
   ],
   providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
