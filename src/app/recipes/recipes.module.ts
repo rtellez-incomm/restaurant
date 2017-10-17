@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { RecipesRoutingModule } from './recipes-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RecipeItemComponent } from './recipe-list/recipe-item/recipe-item.component';
@@ -21,7 +22,8 @@ import { CommonModule } from '@angular/common';
     imports: [
         CommonModule, //allows us to access certain things like ngfor, ngclass etc
         ReactiveFormsModule, 
-        RecipesRoutingModule
+        RecipesRoutingModule, 
+        SharedModule
     ]
 })
 export class RecipesModule {}
