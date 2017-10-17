@@ -1,3 +1,4 @@
+import { SigninComponent } from './../signin/signin.component';
 import { AuthService } from './../auth.service';
 import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
@@ -19,4 +20,6 @@ export class SignupComponent implements OnInit {
     const password = form.value.password;
     this.authService.signupUser(email, password);
   }
+
+
 }
